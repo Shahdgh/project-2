@@ -1,0 +1,36 @@
+
+.button{
+  background-color: rgb(146, 169, 236);
+
+}
+*{
+  background-color: rgb(238, 223, 210);
+  text-align: center;
+  list-style-position: inside;
+  color: rgb(93, 158, 158);
+  font-size: 20px;
+  font-family: 800;
+}
+h2{
+  color: black;
+}
+button{
+background-color: cadetblue;
+padding: 5px 15px;
+border: 2px solid rgb(235, 228, 228);
+}
+button:hover{
+  background-color: rgb(237, 241, 241);
+ 
+  }
+  .button{
+    background-color: red;
+  }
+  .button:hover{
+    background-color: red;
+  }
+  input{
+    background-color: white;
+    border: none;
+    padding: 5px 15px;
+  }
