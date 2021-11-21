@@ -1,0 +1,71 @@
+
+.background{
+  background-image:url("../images/nutraljpeg.jpeg") ;
+   background-size: cover;
+   width: 100%;
+   height: 100vh;
+   background-position:center center;
+   background-repeat: no-repeat;
+   color:white;
+   
+}
+.text{
+    text-align: center;
+    font-size: large;
+    padding-top: 30%;
+}
+/********page API PUPLIC*******/
+.card{
+    width: 100%;
+    height: 40vh;
+    border-radius: 14px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+}
+.img{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+img:hover{
+    opacity: 0.7;
+    transition: 0.4s;
+    transform: translateY(-100px);
+ transition: all 0.9s;
+}
+/* .title{ 
+    position: absolute;
+    background-color: white;
+    font-size: 20px;
+    bottom: 400px;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    z-index: 1;
+    transition: .6s;
+
+} */
+h3{
+    margin: 30px 0;
+    padding: 0;
+    text-align: center;
+    background-color: white;
+    font-size: 20px;
+    bottom: 400px;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    z-index: 1;
+    transition: .6s;
+}
+title:hover{
+    bottom: 0;
+}
+
+
+    
