@@ -13,35 +13,30 @@ function AddPicture() {
         <Navbar />
 
         <div className={styles.content}>
-          <header> Sign Up </header>
+          <header> Add Picture </header>
           <form onSubmit={addPicture}>
           <div className={styles.field}>
               <span>
-               First Name
+            title
               </span>
-              <input type="text" required name="firstName" placeholder="First Name" />
+              <input type="text" required name="title" placeholder="First Name" />
             </div>
             <div className={styles.field}>
               <span>
-               Last Name
+           body
               </span>
-              <input type="text" required name="lastName" placeholder="Last Name" />
-            </div>
-            <div className={styles.field}>
+              <input type="text" required name="description" placeholder="Last Name" />
+            </div>  
+            <div className={styles.photo}>
               <span>
                 <MdEmail />
               </span>
-              <input type="url" required name="photo" placeholder="Photo" />
+              <input type="url" required name="image" placeholder="Photo" />
             </div>
             <div class={styles.field}>
-              <input type="submit" value="signup" />
-              <a href="/login" />
+              <input type="submit"  />
             </div>
           </form>
-          <div class={styles.regester}>
-            do you have account?
-            <a href="./login">Login</a>
-          </div>
         </div>
       </div>
    
