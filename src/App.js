@@ -7,7 +7,10 @@ import "./App.css"
 import { Route, Routes,useNavigate } from "react-router"
 import Home from "./Pages/Home"
  import ApiCard from "./components/ApiCard"
+ import SignUp from "./Pages/SignUp"
 import Login from "./Pages/Login"
+import AddPicture from "./Pages/AddPicture"
+import Profile from "./Pages/Profile"
 
 function App() {
   // const [photos, setPhotos] = useState([])
@@ -201,7 +204,10 @@ const deletePicture = async (e, postId) => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/apicard" element={<ApiCard />} />
+          <Route path="/add-picture" element={<AddPicture />}/>
+          <Route path="/signup" element={<SignUp />}/>
           <Route path="/login" element={<Login />}/>
+          <Route path="/profile" element={<Profile />}/>
         </Routes>
       </PhotosContext.Provider>
     </>

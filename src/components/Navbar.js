@@ -12,8 +12,8 @@ function NavbarItem() {
           </Link>
           {localStorage.token ? (
             <Nav className="me-auto">
-              <Link className="nav-link" to="/add-photo">
-                <BsFillImageFill color="white" /> HOME
+              <Link className="nav-link" to="/add-Picture">
+                <BsFillImageFill color="white" /> Add Picure
               </Link>
             </Nav>
           ) : null}
