@@ -1,17 +1,21 @@
 import { useContext } from "react"
 import PhotosContext from "../Utils/PhotosContext"
 import SectionOne from "../components/SectionOne"
-// import PictureCard from "../components/PictureCard"
+import PictureCard from "../components/PictureCard"
+import { Row } from "react-bootstrap"
 
-function Home() {
-  const { photos } = useContext(PhotosContext)
+function Home(props) {
+  const { picture } = props
+  const { pictures } = useContext(PhotosContext)
 
   return (
     <>
       <SectionOne />
-      {/* <>
-      <PictureCard />
-      </> */}
+      <Row>
+        {pictures.map(picture => (
+          <PictureCard picture={picture} />
+        ))}
+      </Row>
     </>
   )
 }

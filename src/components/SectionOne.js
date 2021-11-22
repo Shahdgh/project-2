@@ -6,6 +6,7 @@ import Navbar from "./Navbar"
 
 function SectionOne() {
   return (
+    <>
     <div className={styles.background}>
       <Navbar />
       <div className={styles.text}>
@@ -16,6 +17,8 @@ function SectionOne() {
         </Link>
       </div>
     </div>
+    </>
+    
   )
 }
 

@@ -5,7 +5,7 @@ import { FaRegUserCircle } from "react-icons/fa"
 import { useContext } from "react"
 import PhotosContext from "../Utils/PhotosContext"
 function NavbarItem() {
-  const {logout} = useContext(PhotosContext)
+  const { logout } = useContext(PhotosContext)
   return (
     <>
       <Navbar bg="dark" variant="dark pt-4">
@@ -20,12 +20,12 @@ function NavbarItem() {
               </Link>
             </Nav>
           ) : null}
-          {localStorage.token? (
+          {localStorage.token ? (
             <Nav className="ms-auto">
               <Link className="nav-link" to="/profile">
                 Profile <FaRegUserCircle color="light" />
               </Link>
-              <Link className="nav-link" onClick={logout} >
+              <Link className="nav-link" to="/" onClick={logout}>
                 Logout
               </Link>
             </Nav>

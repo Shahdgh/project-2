@@ -5,7 +5,7 @@ import styles from "./SignUp.module.css"
 //navbar
 import Navbar from "../components/Navbar"
 //icon
-import { MdEmail, MdPassword } from "react-icons/md"
+import { MdEmail} from "react-icons/md"
 function AddPicture() {
     const { addPicture } = useContext(PhotosContext)
     return (

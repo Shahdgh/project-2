@@ -13,7 +13,7 @@ function ModelItem(props) {
         <Modal.Body>
           <Form.Group className="mb-3">
             <Form.Label>Title</Form.Label>
-            <Form.Control name="title" type="title" defaultValue={picture.title} required />
+            <Form.Control name="title" type="text" defaultValue={picture.title} required />
           </Form.Group>
           <Form.Group className="mb-3">
             <Form.Label column md="2">

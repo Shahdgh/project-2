@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
 // import { Routes } from "react-router-dom";
-import Navbar from "./components/Navbar"
+// import Navbar from "./components/Navbar"
 import PhotosContext from "./Utils/PhotosContext"
 import "./App.css"
 import { Route, Routes, useNavigate } from "react-router"
@@ -12,12 +12,9 @@ import Login from "./Pages/Login"
 import AddPicture from "./Pages/AddPicture"
 import Profile from "./Pages/Profile"
 
-
-
-
 function App() {
   const [photos, setPhotos] = useState([])
-  const [picture, setPicture] = useState([])
+  const [pictures, setPicture] = useState([])
   const [profile, setProfile] = useState(null)
 
   const navigate = useNavigate()
@@ -33,7 +30,7 @@ function App() {
       const data = response.data
       setPhotos(data)
     } catch (error) {
-      console.log(error)
+      console.log(error.response?.data)
     }
   }
   console.log(photos)
@@ -51,14 +48,11 @@ function App() {
       const response = await axios.get("https://vast-chamber-06347.herokuapp.com/api/v2/photography-209/items")
       setPicture(response.data)
     } catch (error) {
-      if (error.response) {
-        console.log(error.response.data)
-      } else {
-        console.log(error)
-      }
+      console.log(error?.response?.data)
     }
   }
-  console.log(picture)
+
+  console.log(pictures)
   ///////////////////////////////addPictuer///////////////////////////////
   const addPicture = async e => {
     e.preventDefault()
@@ -79,7 +73,7 @@ function App() {
 
       navigate("/")
     } catch (error) {
-      console.log(error.response.data)
+      console.log(error.response?.data)
     }
   }
   ////////////////////////////sinup/////////////////////////////
@@ -124,7 +118,7 @@ function App() {
       console.log(token)
       navigate("/")
     } catch (error) {
-      console.log(error.response.data)
+      console.log(error)
     }
   }
   /////////logout///////////
@@ -142,11 +136,10 @@ function App() {
       })
       setProfile(response.data)
     } catch (error) {
-      console.log(error?.response?.data)
+      console.log(error.response?.data)
     }
   }
-  
-  
+
   /////////////confirm //////////////////////
   const confirmPicture = async (e, pictureId) => {
     e.preventDefault()
@@ -167,8 +160,9 @@ function App() {
         }
       )
       getPicture()
+      getProfile()
     } catch (error) {
-      console.log(error.response.data)
+      console.log(error.response?.data)
     }
   }
   ///////////delete////////////////////
@@ -183,13 +177,13 @@ function App() {
       })
       getPicture()
     } catch (error) {
-      console.log(error.response.data)
+      console.log(error.response?.data)
     }
   }
   ////////////////////////////////////////////////////////
   const store = {
     photos: photos,
-    picture: picture,
+    pictures: pictures,
     profile: profile,
     signUp: signUp,
     login: login,
@@ -202,8 +196,6 @@ function App() {
   return (
     <>
       <PhotosContext.Provider value={store}>
-        {/* <Navbar /> */}
-        
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/apicard" element={<ApiCard />} />

@@ -7,7 +7,7 @@ import styles from "./SectionOne.module.css"
 import {  MdLinkedCamera} from "react-icons/md";
 function Apicard(props) {
   const { photos } = useContext(PhotosContext)
-  // const { photo } = props
+   const { photo } = props
   // console.log(photo)
   return (
     <>

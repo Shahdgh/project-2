@@ -4,7 +4,8 @@ import { Link } from "react-router-dom"
 import PhotosContext from "../Utils/PhotosContext"
 import ModelItem from "./Model"
 function PictureCard(props) {
-  const { picture, inProfile } = props
+  const { inProfile, picture } = props
+  console.log(picture)
   const [show, setShow] = useState(false)
   const { deletePicture } = useContext(PhotosContext)
   const handleClose = () => {
@@ -35,8 +36,6 @@ function PictureCard(props) {
                 </Button>
               </>
             ) : null}
-        
-            
           </Card.Body>
         </Card>
       </Col>

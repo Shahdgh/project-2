@@ -1,14 +1,14 @@
-import { useContext, useState } from "react"
+import { useContext } from "react"
 import { Col, Container, Row, Image } from "react-bootstrap"
 import PictureCard from "../components/PictureCard"
 import PhotosContext from "../Utils/PhotosContext"
 import Navbar from "../components/Navbar"
 function Profile() {
-  const { profile, picture } = useContext(PhotosContext)
+  const { profile, pictures } = useContext(PhotosContext)
   if (!profile) {
     return <h1>LOADING ...</h1>
   }
-  const myPicture = picture.filter(picture => picture._user._id === profile._id)
+  const myPicture = pictures.filter(picture => picture._user._id === profile._id)
   return (
     <>
       <Navbar />
