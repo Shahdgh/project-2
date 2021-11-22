@@ -13,17 +13,9 @@
     background-position:center;
 
 }
-.bgimg::after{
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: rgba(0,0,0,0.8);
-}
+
 .content{
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 50%;
     z-index: 99;
@@ -31,42 +23,67 @@
     padding: 60px 32px;
     width: 370px;
     transform: translate(-50%,-50%);
-    background:rgba(255,255,255,0.04);
-    box-shadow:-px 4px 28px 0px rgba(0,0,0,0.75);
+    background:rgba(16, 17, 16, 0.04);
+    box-shadow:1px 4px 28px 0px rgba(5, 5, 5, 0.75);
 }
+/****header login******/
 .content header{
     color: #fff;
     font-size: 33px;
     font-weight: 600;
-    margin: 0 0 35px 0;
+    margin: 0 0 32px 0;
 }
-.field{
-    position: relative;
+/*******email style***********/
+.field{ 
     height: 45px;
     width: 100%;
     display: flex;
+    /* border: 5px solid #f1efef; */
     background: rgba(255,255,255,0.94);
 }
 .field span{
-    color: #222;
     width: 40px;
     line-height: 45px;
+   
 
 }
 .field input{
     height: 100%;
     width: 100%;
-    background: transparent;
     border: none;
     outline: none;
-    color: #222;
     font-size: 16px;
 }
-
+/****input password******/
 .space{
-    margin-top: 16px;
+    /* border: 5px solid rgb(241, 239, 239); */
+   
+    height: 45px;
+    width: 100%;
+    display: flex;
+    background:#fffffff0;
 }
+.space span{
+    width: 40px;
+    line-height: 45px;
+   
 
+}
+.space input{
+   
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+   
+/******Icon*****/
+.icon{
+    background-color: black;
+    font-size: medium;
+}
+/*******FOTGET PASSWORd********/
 .pass {
 text-align: left;
 margin: 10px 0;
@@ -78,27 +95,32 @@ margin: 10px 0;
 .pass:hover a{
 text-decoration: underline;
 }
+/*******input login (button*******/
 .field input{
     background: #3498db;
-    border: 1px solid  #3498db;
     color: #fff;
     font-size: 18px;
   
     cursor: pointer;
 }
 .field input:hover{
-    background: #2691db;
+    background: hsl(204, 65%, 35%);
 }
+/***or login**/
 .login{
     color: #fff;
     margin: 20px 0;
+    font-size: 15px;
+    font-weight: bolder;
 }
+/* div facbook instagrem*/
 .links{
     display: flex;
     cursor: pointer;
-    color: #fff;
+    color: rgb(255, 255, 255);
     margin: 0 0 20px 0;
 }
+/*facbook instagrem*/
 .facebook,
 .instagram{
  width: 100%;
@@ -117,17 +139,19 @@ text-decoration: underline;
     
 }
 .facebook:hover{
-    background: #677286;
+    background: #122b58;
 }
 .instagram:hover{
-    background: #472b34;
+    background: #290510;
 }
-
+/*****REgester******/
 .regester{
-    font-size: 15px;
+    font-size: 20px;
     color: #ffffff;
 }
 .regester a{
+    font-size: 20px;
+    font-weight: bolder;
     color: #3498db;
     text-decoration: none;
 }

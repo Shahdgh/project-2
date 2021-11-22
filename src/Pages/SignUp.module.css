@@ -7,32 +7,26 @@
     color: lavender;
   
 }
+
 .bgimg{
-    background:url("../images/girl.jpeg");
+    background:url("../images/profile.jpeg");
     height: 100vh;
     background-size: cover;
     background-position:center;
 
 }
-.bgimg::after{
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: rgba(0,0,0,0.8);
-}
+
 .content{
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 50%;
-    z-index: 40;
+    z-index: 99;
     text-align: center;
     padding: 60px 32px;
     width: 500px;
     transform: translate(-50%,-50%);
-    background:rgba(224, 220, 220, 0.04);
+    background:rgba(16, 17, 16, 0.04);
+    box-shadow:1px 4px 28px 0px rgba(5, 5, 5, 0.75);
 }
 .content header{
     color: #fff;
@@ -41,3 +35,25 @@
     margin: 0 0 35px 0;
   
 }
+/* .space{
+
+} */
+.field input{
+width: 100%;
+height: 40px;
+border: none;
+}
+
+
+/******buton signup*******/
+.signup{
+    padding: 10px 20px;
+    background-color: rgb(13, 78, 218);
+    border: none;
+   margin-top: 10px;
+}
+.signup:hover{
+    background-color: rgb(16, 24, 65);
+   margin: 10px 10px;
+}
+   

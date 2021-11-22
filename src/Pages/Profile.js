@@ -2,7 +2,8 @@ import { useContext } from "react"
 import { Col, Container, Row, Image } from "react-bootstrap"
 import PictureCard from "../components/PictureCard"
 import PhotosContext from "../Utils/PhotosContext"
-import Navbar from "../components/Navbar"
+// import Navbar from "../components/Navbar"
+import ImgProfile from "../components/ImgProfile"
 function Profile() {
   const { profile, pictures } = useContext(PhotosContext)
   if (!profile) {
@@ -11,11 +12,12 @@ function Profile() {
   const myPicture = pictures.filter(picture => picture._user._id === profile._id)
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
+      <ImgProfile  />
       <Container>
-        <Row className="d-flex align-item-center mb-5">
+        <Row xs={1} md={3} className="d-flex align-item-center mb-5 text-coloe-black">
           <Col>
-            <Image src={profile.photo} height="250px" />
+            <Image src={profile.photo} height="250px" Styles={{marginleft:"40%", }}/>
           </Col>
           <Col>
             <h2 className="mb-2">

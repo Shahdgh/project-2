@@ -19,13 +19,13 @@ function Login() {
           <form onSubmit={login}>
             <div className={styles.field}>
               <span>
-                <MdEmail />
+                <MdEmail className={styles.icon}/>
               </span>
               <input type="email" required name="email" placeholder="Email" />
             </div>
             <div className={styles.space}>
               <span>
-                <MdPassword />
+                <MdPassword className={styles.icon} />
               </span>
               <input type="password" required name="password" placeholder="Password" />
             </div>

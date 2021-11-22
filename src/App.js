@@ -132,7 +132,7 @@ function App() {
   /////////logout///////////
   const logout = () => {
     localStorage.removeItem("token")
-    // navigate("/")
+     navigate("/")
   }
   ///////get profile
   const getProfile = async () => {

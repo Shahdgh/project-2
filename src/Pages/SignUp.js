@@ -5,27 +5,30 @@ import styles from "./SignUp.module.css"
 //navbar
 import Navbar from "../components/Navbar"
 //icon
-import { MdEmail, MdPassword } from "react-icons/md"
+import { MdEmail, MdPassword ,MdAddAPhoto} from "react-icons/md"
 
 function SignUp() {
     const { signUp } = useContext(PhotosContext)
     return (
+      
         <div className={styles.bgimg}>
-        <Navbar />
+        <>
+        <Navbar/>
+        </>
 
         <div className={styles.content}>
           <header> Sign Up </header>
           <form onSubmit={signUp}>
           <div className={styles.field}>
-              <span>
-               First Name
-              </span>
+              {/* <span>
+               Name
+              </span> */}
               <input type="text" required name="firstName" placeholder="First Name" />
             </div>
             <div className={styles.field}>
-              <span>
-               Last Name
-              </span>
+              {/* <span>
+               Name
+              </span> */}
               <input type="text" required name="lastName" placeholder="Last Name" />
             </div>
             <div className={styles.field}>
@@ -42,12 +45,12 @@ function SignUp() {
             </div>
             <div className={styles.field}>
               <span>
-                <MdEmail />
+                <MdAddAPhoto />
               </span>
               <input type="url" required name="photo" placeholder="Photo" />
             </div>
-            <div class={styles.field}>
-              <input type="submit" value="signup" />
+            <div >
+              <input class={styles.signup} type="submit" value="signup" />
               <a href="/login" />
             </div>
           </form>
