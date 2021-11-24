@@ -33,19 +33,19 @@ function SignUp() {
             </div>
             <div className={styles.field}>
               <span>
-                <MdEmail />
+                {/* <MdEmail /> */}
               </span>
               <input type="email" required name="email" placeholder="Email" />
             </div>
-            <div className={styles.space}>
+            <div className={styles.field}>
               <span>
-                <MdPassword />
+                {/* <MdPassword /> */}
               </span>
               <input type="password" required name="password" placeholder="Password" />
             </div>
             <div className={styles.field}>
               <span>
-                <MdAddAPhoto />
+                {/* <MdAddAPhoto /> */}
               </span>
               <input type="url" required name="photo" placeholder="Photo" />
             </div>

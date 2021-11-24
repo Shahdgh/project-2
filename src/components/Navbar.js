@@ -4,6 +4,7 @@ import { Navbar, Container, Nav } from "react-bootstrap"
 import {  BsPencilSquare, BsFillImageFill } from "react-icons/bs"
 import { FaRegUserCircle } from "react-icons/fa"
 import { FiLogIn } from "react-icons/fi"
+// import { MdAddPhotoAlternate } from "react-icons/md";
 import { useContext } from "react"
 import PhotosContext from "../Utils/PhotosContext"
 function NavbarItem() {
@@ -19,17 +20,19 @@ function NavbarItem() {
     //     </nav>
     //   </container>
     // </navbar>
+    
     <>
       <Navbar  style={{display: "fixed", backgroundColor: "none"}}  variant="dark pt-4">
         <Container>
-          <Link className="navbar-brand" to="/">
-            <BsFillImageFill /> PHOTOGRAPHY
+          <Link className="navbar-brand" style={{fontSize:"30px", marginLeft: "60px",fontFamily:"Dancing Script"}} to="/">
+            PHOTOGRAPHY
+            {/* <BsFillImageFill /> */}
           </Link>
           {localStorage.token ? (
             <Nav className="me-auto">
-              <Link className="nav-link" to="/add-Picture">
-                <BsFillImageFill color="white" /> Add Picure
-              </Link>
+              {/* <Link className="nav-link" to="/add-Picture">
+                <MdAddPhotoAlternate style={{fontSize:"30px", marginLeft: "60px" ,width:"50%"}}  /> 
+              </Link> */}
             </Nav>
           ) : null}
           {localStorage.token ? (
@@ -37,11 +40,7 @@ function NavbarItem() {
               <Link className="nav-link" to="/profile">
                 Profile <FaRegUserCircle color="light" />
               </Link>
-<<<<<<< Updated upstream
               <Link className="nav-link" to="/" onClick={logout}>
-=======
-              <Link className="nav-link" to="/" onClick={logout} >
->>>>>>> Stashed changes
                 Logout
               </Link>
             </Nav>

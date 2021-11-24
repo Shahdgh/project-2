@@ -9,7 +9,8 @@
 }
 
 .bgimg{
-    background:url("../images/profile.jpeg");
+    /* background:url("../images/profile.jpeg"); */
+    background: url("https://images.pexels.com/photos/1612353/pexels-photo-1612353.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
     height: 100vh;
     background-size: cover;
     background-position:center;
@@ -35,12 +36,10 @@
     margin: 0 0 35px 0;
   
 }
-/* .space{
-
-} */
 .field input{
 width: 100%;
 height: 40px;
+color: black;
 border: none;
 }
 
@@ -56,4 +55,13 @@ border: none;
     background-color: rgb(16, 24, 65);
    margin: 10px 10px;
 }
-   
+   /*******************/
+.regester a{
+    font-size: 20px;
+    font-weight: bolder;
+    color: #3498db;
+    text-decoration: none;
+}
+.regester a:hover{
+    text-decoration: underline;
+}

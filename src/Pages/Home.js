@@ -3,24 +3,29 @@ import PhotosContext from "../Utils/PhotosContext"
 import SectionOne from "../components/SectionOne"
 import PictureCard from "../components/PictureCard"
 import { Row } from "react-bootstrap"
+import Carousel from "../components/Carousel"
+import Navbar from "../components/Navbar"
+import Work from "../components/WorkTeam"
 
-<<<<<<< Updated upstream
 function Home(props) {
   const { picture } = props
   const { pictures } = useContext(PhotosContext)
-=======
-function Home() {
-  // const { photos } = useContext(PhotosContext)
->>>>>>> Stashed changes
 
   return (
     <>
+      <Navbar />
       <SectionOne />
-      <Row>
-        {pictures.map(picture => (
-          <PictureCard picture={picture} />
-        ))}
-      </Row>
+          <Work/>
+
+      <Carousel />
+
+      <div >
+        <Row  xs={1} md={3} >
+          {pictures.map(picture => (
+            <PictureCard picture={picture} />
+          ))}
+        </Row>
+      </div>
     </>
   )
 }

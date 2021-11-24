@@ -15,7 +15,7 @@ function Profile() {
       {/* <Navbar /> */}
       <ImgProfile  />
       <Container>
-        <Row xs={1} md={3} className="d-flex align-item-center mb-5 text-coloe-black">
+        {/* <Row xs={1} md={3} className="d-flex align-item-center mb-5 text-coloe-black">
           <Col>
             <Image src={profile.photo} height="250px" Styles={{marginleft:"40%", }}/>
           </Col>
@@ -25,7 +25,7 @@ function Profile() {
             </h2>
             <p className="text-muted">{profile.email}</p>
           </Col>
-        </Row>
+        </Row> */}
         <Row md={4} sm={2} xs={1}>
           {myPicture.map(picture => (
             <PictureCard picture={picture} inProfile={true} />

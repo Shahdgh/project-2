@@ -3,6 +3,10 @@ import { Col, Card, Button } from "react-bootstrap"
 import { Link } from "react-router-dom"
 import PhotosContext from "../Utils/PhotosContext"
 import ModelItem from "./Model"
+//styles
+import {MdDevicesOther,  MdAddLocationAlt} from "react-icons/md";
+
+import styles from "./PictureCard.module.css"
 function PictureCard(props) {
   const { inProfile, picture } = props
   console.log(picture)
@@ -15,23 +19,20 @@ function PictureCard(props) {
     setShow(true)
   }
   return (
-    <>
-      <Col>
-        <Card>
-          <Card.Body>
-            <Card.Title>
+    <div >
+      <Col >
+        <Card >
+          <Card.Body className={styles.colcard} >
+            <Card.Title className={styles.cardtitle}>
               {picture._user.firstName} {picture._user.lastName}
             </Card.Title>
-            <Card.Img variant="top" src={picture.image} />
-            <Card.Title>{picture.title}</Card.Title>
-            <Card.Text>{picture.description} </Card.Text>
+            <Card.Img className={styles.cardimg} src={picture.image} />
+            <Card.Title className={styles.cardtitlee}><MdAddLocationAlt className={styles.icon}/>:  {picture.title}</Card.Title>
+            <Card.Text className={styles.cardtitlee}><MdDevicesOther className={styles.icon}/>:  {picture.description} </Card.Text>
             {inProfile ? (
               <>
-                <Button variant="success" className="m-2" onClick={handleOpen}>
-                  {" "}
-                  Edit
-                </Button>
-                <Button className="ms-2" variant="danger" id={picture._id} onClick={deletePicture} variant="danger">
+                <Button className=" me-4" variant="success " onClick={handleOpen}> Edit </Button>
+                <Button  id={picture._id} onClick={deletePicture} variant="danger">
                   Delete
                 </Button>
               </>
@@ -40,7 +41,7 @@ function PictureCard(props) {
         </Card>
       </Col>
       <ModelItem show={show} handleClose={handleClose} picture={picture} />
-    </>
+    </div>
   )
 }
 export default PictureCard

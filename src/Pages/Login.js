@@ -40,10 +40,10 @@ function Login() {
           <div class={styles.login}>or login with</div>
           <div class={styles.links}>
             <div class={styles.facebook}>
-              <span>Facebook</span>
+              <span><a href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Flibrary.book.knowledge%2F">Facebook</a></span>
             </div>
             <div class={styles.instagram}>
-              <span>Instagrem</span>
+              <span><a href="https://www.instagram.com/">Instagrem</a></span>
             </div>
           </div>
           <div class={styles.regester}>
