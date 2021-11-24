@@ -1,9 +1,6 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
-// import { Routes } from "react-router-dom";
-// import Navbar from "./components/Navbar"
 import PhotosContext from "./Utils/PhotosContext"
-
 import { Route, Routes, useNavigate } from "react-router"
 import Home from "./Pages/Home"
 import ApiCard from "./components/ApiCard"
@@ -19,9 +16,9 @@ function App() {
 
   const navigate = useNavigate()
 
-  useEffect(() => {
-    getPhotos()
-  }, [])
+  // useEffect(() => {
+  //   getPhotos()
+  // }, [])
 
   const getPhotos = async () => {
     try {
@@ -34,23 +31,15 @@ function App() {
     }
   }
 
-  ///////////////////////////////////////////////////////end////////////////////////////////////////
-  /////////////////////////////////////profile///////////////////////////////////////
-
-  
-  ////////////////////////////////////////////////end//////////////////////////////////////////////////
-  /////////////////////////////////////////////del///////////////////////////////////////////
-
-  
-  /*****************get Pictuer privt Api */
-
+/////////////////
   useEffect(() => {
+    getPhotos()
     getPicture()
     if (localStorage.token) {
       getProfile()
     }
   }, [])
-
+/*****************get Pictuer privt Api */
   const getPicture = async () => {
     try {
       const response = await axios.get("https://vast-chamber-06347.herokuapp.com/api/v2/photography-209/items")
@@ -62,7 +51,7 @@ function App() {
 
   console.log(pictures)
 
-  ////////////////////////////sinup/////////////////////////////
+  ////////////////////////////Sign Up /////////////////////////////
   const signUp = async e => {
     e.preventDefault()
     try {
@@ -132,7 +121,7 @@ function App() {
     }
   }
   
-  ///////get profile
+  ///////get profile/////////////////////////////
   const getProfile = async () => {
     try {
       const response = await axios.get("https://vast-chamber-06347.herokuapp.com/api/user/me", {
@@ -186,7 +175,7 @@ function App() {
       console.log(error.response?.data)
     }
   }
-  ////////////////////////////////////////////////////////
+  ///////////////////store/////////////////////////////////////
   const store = {
     photos: photos,
     pictures: pictures,

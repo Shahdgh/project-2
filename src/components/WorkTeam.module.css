@@ -19,3 +19,16 @@
     font-weight: bolder;
    
 }
+
+/*******Responsiv ***********/
+@media screen and (max-width:768px) {
+    .work{
+        width: 100%;
+        background-color: rgb(186, 186, 187);
+        margin-left: 1px;
+        font-size: 15px;
+    }
+    .work img{
+        align-items: center;
+    }
+}
