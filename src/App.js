@@ -3,7 +3,7 @@ import axios from "axios"
 // import { Routes } from "react-router-dom";
 // import Navbar from "./components/Navbar"
 import PhotosContext from "./Utils/PhotosContext"
-import "./App.css"
+
 import { Route, Routes, useNavigate } from "react-router"
 import Home from "./Pages/Home"
 import ApiCard from "./components/ApiCard"
@@ -61,29 +61,7 @@ function App() {
   }
 
   console.log(pictures)
-  ///////////////////////////////addPictuer///////////////////////////////
-  const addPicture = async e => {
-    e.preventDefault()
-    try {
-      const form = e.target
-      const pictureBody = {
-        title: form.elements.title.value,
-        description: form.elements.description.value,
-        image: form.elements.image.value,
-      }
-      await axios.post("https://vast-chamber-06347.herokuapp.com/api/v2/photography-209/items", pictureBody, {
-        headers: {
-          Authorization: localStorage.token,
-        },
-      })
-      console.log("you hava add picture")
-      getPicture()
 
-      navigate("/")
-    } catch (error) {
-      console.log(error.response?.data)
-    }
-  }
   ////////////////////////////sinup/////////////////////////////
   const signUp = async e => {
     e.preventDefault()
@@ -96,11 +74,7 @@ function App() {
         email: form.elements.email.value,
         photo: form.elements.photo.value,
       }
-      await axios.post("https://vast-chamber-06347.herokuapp.com/api/user", userBody, {
-        headers: {
-          Authorization: localStorage.token,
-        },
-      })
+      await axios.post("https://vast-chamber-06347.herokuapp.com/api/user", userBody)
       console.log("sign up success")
       navigate("/login")
     } catch (error) {
@@ -134,6 +108,30 @@ function App() {
     localStorage.removeItem("token")
      navigate("/")
   }
+  ///////////////////////////////addPictuer///////////////////////////////
+  const addPicture = async e => {
+    e.preventDefault()
+    try {
+      const form = e.target
+      const pictureBody = {
+        title: form.elements.title.value,
+        description: form.elements.description.value,
+        image: form.elements.image.value,
+      }
+      await axios.post("https://vast-chamber-06347.herokuapp.com/api/v2/photography-209/items", pictureBody, {
+        headers: {
+          Authorization: localStorage.token,
+        },
+      })
+      console.log("you hava add picture")
+      getPicture()
+
+      navigate("/")
+    } catch (error) {
+      console.log(error.response?.data)
+    }
+  }
+  
   ///////get profile
   const getProfile = async () => {
     try {
@@ -155,7 +153,7 @@ function App() {
       const form = e.target
       const pictureBody = {
         title: form.elements.title.value,
-        body: form.elements.body.value,
+        description: form.elements.description.value,
         image: form.elements.image.value,
       }
       await axios.put(
@@ -174,7 +172,7 @@ function App() {
     }
   }
   ///////////delete////////////////////
-  const deletePicture = async (e, pictureId) => {
+  const deletePicture = async e=> {
     e.preventDefault()
     try {
       const pictureId = e.target.id

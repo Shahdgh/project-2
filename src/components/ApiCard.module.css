@@ -1,3 +1,5 @@
+
+
 /********page API PUPLIC******/
 .card{
     width: 100%;
@@ -6,17 +8,18 @@
     overflow: hidden;
     cursor: pointer;
     position: absolute;
-    /* background-color: rgba(247, 240, 240, 0.822); */
+    
     
 }
-/* .img{
+.img{
 position: absolute;
 top: 0;
 left: 0;
 width: 100%;
 height: 100%;
 object-fit: cover;
-} */
+z-index: 1;
+}
 
 .img:hover{
     opacity: 0.2;
@@ -24,57 +27,29 @@ object-fit: cover;
  transition: all 0.8s;
 } 
 h5{
-    
+    position: absolute;
+    z-index: 0;
+    bottom: 10%;
     color: black;
-    padding-top: 80%;
-    text-align: center;
-    background-color: white;
+   
     font-size: 20px;
     
 }
-h5:hover{
-   
+ h5:hover{
+   display: block;
   opacity: 0.4;
-    transform: translateY(100px);
+    transform: translateY(-50%);
  transition: all 0.8s;
 
-}
-/* .title{ 
-    background-color: yellowgreen;
-    transform: translate(10px);
-    position: relative;
-    background-color: white;
-    font-size: 40px;
-    bottom: 400px;
-    left: 0; */
-    /* width: 100%;
-    height: 120px; */
-    /* z-index: -1;
-    transition: .6s;
+} 
 
-} */
-/* h5{
-    transform: translate(100%);
-} */
- /* .title {
-     background: violet;
-    color: violet;
-    transform: translate(-50px, -50px);
-} */
-    /* position: fixed;
-    margin: 30px 0;
-    padding: 0;
-    text-align: center;
-    background-color: white;
-    font-size: 20px;
-    bottom: 400px;
-    left: 0;
-    width: 100%;
-    height: 120px;
-    z-index: 1;
-    transition: .6s; */
-/* 
-title:hover{
-    bottom: 0;
-} */
+
+
+
+
+
+
+
+
+
 

@@ -4,29 +4,21 @@ import { Navbar, Container, Nav } from "react-bootstrap"
 import {  BsPencilSquare, BsFillImageFill } from "react-icons/bs"
 import { FaRegUserCircle } from "react-icons/fa"
 import { FiLogIn } from "react-icons/fi"
-// import { MdAddPhotoAlternate } from "react-icons/md";
+import { MdAddPhotoAlternate } from "react-icons/md";
+///////
 import { useContext } from "react"
 import PhotosContext from "../Utils/PhotosContext"
 function NavbarItem() {
   const { logout } = useContext(PhotosContext)
   return (
-    // <>
-    // <navbar >
-    //   <container>
-    //     <nav>
-    //    <ul>
-    //      <li></li>
-    //    </ul>
-    //     </nav>
-    //   </container>
-    // </navbar>
-    
+   
     <>
-      <Navbar  style={{display: "fixed", backgroundColor: "none"}}  variant="dark pt-4">
-        <Container>
-          <Link className="navbar-brand" style={{fontSize:"30px", marginLeft: "60px",fontFamily:"Dancing Script"}} to="/">
+      <Navbar   variant="dark pt-4">
+        <Container >
+          <Link className="navbar-brand" style={{fontSize:"30px", marginLeft: "40px",fontFamily:"Dancing Script", paddingTop:"16px"}} to="/">
+          {/* <BsFillImageFill  /> */}
             PHOTOGRAPHY
-            {/* <BsFillImageFill /> */}
+           
           </Link>
           {localStorage.token ? (
             <Nav className="me-auto">
@@ -37,19 +29,19 @@ function NavbarItem() {
           ) : null}
           {localStorage.token ? (
             <Nav className="ms-auto">
-              <Link className="nav-link" to="/profile">
-                Profile <FaRegUserCircle color="light" />
+              <Link style={{fontSize:"20px", color: "white"}}  className="nav-link" to="/profile">
+                Profile <FaRegUserCircle color="light " />
               </Link>
-              <Link className="nav-link" to="/" onClick={logout}>
+              <Link style={{fontSize:"20px", color: "white"}} className="nav-link" to="/" onClick={logout}>
                 Logout
               </Link>
             </Nav>
           ) : (
             <Nav className="ms-auto">
-              <Link className="nav-link" to="/signup">
+              <Link style={{fontSize:"20px", color: "white"}} className="nav-link" to="/signup">
                 Sign up <BsPencilSquare color="white" />
               </Link>
-              <Link className="nav-link" to="/login">
+              <Link style={{fontSize:"20px", color: "white"}} className="nav-link" to="/login">
                 Login <FiLogIn color="white" />
               </Link>
             </Nav>

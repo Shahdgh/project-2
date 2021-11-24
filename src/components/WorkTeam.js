@@ -1,82 +1,67 @@
 import styles from "./WorkTeam.module.css"
+import reahb from "../images/rehab.jpg"
+import shahad from "../images/shahad.jpg"
+import Sanobar from "../images/ff.jpg"
 
 function WorkTeam() {
-    return ( 
-        <div className={styles.work} >
-          <div >
-            <h2>Work Team</h2>
+  return (
+    <div className={styles.work}>
+      <div>
+        <h2 className={styles.headerwork}>Team Work </h2>
+      </div>
+      <div class="row mb-2">
+        <div class="col-md-6">
+          <div class="row g-0  flex-md-row mb-4 ml-6 shadow-sm h-md-250 position-relative">
+            <div class="col-auto d-lg-block">
+              <img className="ms-4" src={reahb} width="250" height="250" />
+            </div>
+            <div class="col p-4 d-flex flex-column ">
+              <h3 class="mb-0 text-dark">Rehab Algahmdi</h3>
+            </div>
           </div>
-            <div container height="300px">
-  <div class="row row-cols-2 ">
-    <div class="col ">
-    <div class="card mb-3   max-width:50px;">
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img src="https://images.pexels.com/photos/807598/pexels-photo-807598.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-       class="img-fluid rounded-start" alt="..." height="100%"/>
-    </div>
-    <div class="col-md-4 pt-0">
-      <div class="card-body " style={{padding:"0px"}}>
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      
-      </div>
-    </div>
-  </div>
-</div>
-    </div>
-    <div class="col">
-    <div class="card mb-3 h-30 max-width: 50px;">
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img src="https://images.pexels.com/photos/807598/pexels-photo-807598.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="img-fluid rounded-start" alt="..." height="100vh"/>
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text"></p>
-      
-      </div>
-    </div>
-  </div>
-</div>
-    </div>
-    <div class="col">
-    <div class="card mb-3 max-width: 50px;">
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img src="https://images.pexels.com/photos/807598/pexels-photo-807598.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="img-fluid rounded-start" alt="..."/>
-    </div>
-    <div class="col-md-8 pt-0" >
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">.</p>
-      
-      </div>
-    </div>
-  </div>
-</div>
-    </div>
-    <div class="col">
-    <div class="card mb-3 max-width: 540px;">
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img src="..." class="img-fluid rounded-start" alt="..."/>
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
-  </div>
-</div>
-    </div>
-  </div>
-</div>
         </div>
-     );
+        <div class="col-md-6">
+          <div class="row g-0  flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col-auto d-lg-block">
+              <img
+                src={shahad}
+                width="250"
+                height="250"
+              />
+            </div>
+            <div class="col p-4 d-flex flex-column position-static">
+              <h3 class="mb-0 text-dark">Shahad Alghmdi</h3>
+            </div>
+          </div>
+        </div>
+        <h2 className={styles.headerwork}> Supervisor </h2>
+        <div class="col-md-6">
+          <div class="row g-0 flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col-auto  d-lg-block">
+              <img className="ms-4"
+                src={Sanobar}
+                width="250"
+                height="250" />
+            </div>
+            <div class="col p-4  flex-column position-static">
+              <h3 class="mb-0 text-dark "> Ms Sanobar Fatema </h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="row g-0   flex-md-row mb-4 shadow-sm h-md-250 position-relative b-none">
+            <div class="col-auto  d-lg-block">
+              <img 
+               src="https://ca.slack-edge.com/T02FM3FE1DJ-U02G3S4EQR2-101e89aa0287-512" width="250" height="250" />
+            </div>
+            <div class="col p-4 d-flex flex-column position-static">
+              <h3 class="mb-0 text-dark">Mr Adnan </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
 }
 
-export default WorkTeam;
+export default WorkTeam
