@@ -12,20 +12,11 @@ function Profile() {
   const myPicture = pictures.filter(picture => picture._user._id === profile._id)
   return (
     <>
-      {/* <Navbar /> */}
+     
       <ImgProfile  />
       <Container>
-        {/* <Row xs={1} md={3} className="d-flex align-item-center mb-5 text-coloe-black">
-          <Col>
-            <Image src={profile.photo} height="250px" Styles={{marginleft:"40%", }}/>
-          </Col>
-          <Col>
-            <h2 className="mb-2">
-              {profile.firstName} {profile.lastName}
-            </h2>
-            <p className="text-muted">{profile.email}</p>
-          </Col>
-        </Row> */}
+       
+       
         <Row md={4} sm={2} xs={1}>
           {myPicture.map(picture => (
             <PictureCard picture={picture} inProfile={true} />

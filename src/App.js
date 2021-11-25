@@ -88,6 +88,7 @@ function App() {
       localStorage.token = token
       console.log(token)
       navigate("/")
+      getProfile()
     } catch (error) {
       console.log(error)
     }
