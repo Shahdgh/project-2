@@ -12,11 +12,8 @@ function Profile() {
   const myPicture = pictures.filter(picture => picture._user._id === profile._id)
   return (
     <>
-     
-      <ImgProfile  />
+      <ImgProfile />
       <Container>
-       
-       
         <Row md={4} sm={2} xs={1}>
           {myPicture.map(picture => (
             <PictureCard picture={picture} inProfile={true} />

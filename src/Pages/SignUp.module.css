@@ -67,3 +67,24 @@ border: none;
 .regester a:hover{
     text-decoration: underline;
 }
+
+
+@media screen and (max-width:768) {
+    
+    .content{
+     
+        text-align: center;
+        padding: 40px 25px;
+        width: 50px;
+        transform: translate(-50%,-50%);
+        background:rgba(16, 17, 16, 0.04);
+        box-shadow:1px 4px 28px 0px rgba(5, 5, 5, 0.75);
+    }
+    .field input{
+        width: 50%;
+        height: 40px;
+        color: black;
+        border: none;
+        }
+        
+}
